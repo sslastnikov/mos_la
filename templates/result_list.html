@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Результаты</title>
+</head>
+<body>
+	<h2>
+	<ul>
+		{% for key, value in resultDict.items %}
+			<li>{{key}}
+				<ul>
+					{% for link in value %}
+						<li><a href="{{link.0}}">{{link.1}}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+		{% endfor %}
+	</ul>
+	</h2>
+</body>
+</html>
